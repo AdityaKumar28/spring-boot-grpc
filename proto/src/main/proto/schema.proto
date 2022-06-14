@@ -1,0 +1,17 @@
+syntax="proto3";
+package io.github.adityakumar28;
+
+option java_multiple_files=true;
+
+message PersonRequest{
+  string name=1;
+  int32 age=2;
+}
+
+message PersonResponse{
+  string name=1;
+}
+
+service PersonService{
+   rpc getNameByPerson(PersonRequest) returns (PersonResponse){};
+}
